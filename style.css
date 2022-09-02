@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --ff-heading: 'Staatliches', sans-serif;
+    --ff-texting: 'palaquin', cursive;
+
+    --bg-primary: #8E9AAF;
+    --bg-header: #CBC0D3;
+    --bg-secundary: #EFF1FF;
+    --bg-main: #FEEAFA;
+
+    --fc-primary-header: #FFFFFF;
+    --fc-primary: #23053A;
+    --fc-secundary: #4A4E69;
+
+    font-size: 62.5%;
+
+
+
+}
+
+header {
+    background-color: var(--bg-primary);
+    text-align: center;
+
+    animation-name: topdown;
+    animation-duration: 700ms;
+    margin-bottom: 1.4rem;
+    height: 27rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    
+
+
+header > h1 {
+    font-family: var(--ff-heading);
+
+    background-color: var(--bg-header);
+    color: var(--fc-primary-header);
+    text-transform: uppercase;
+
+    font-weight: 400;
+    font-size: 4.0rem;
+    letter-spacing: 0.5rem;
+    height: 4.9rem;
+    width: 100%;
+
+
+
+    
+}
+
+header img {
+    width: 13rem;
+    margin: 3rem;
+}
+
+body {
+    font-family: var(--ff-texting);
+    background-color: var(--bg-secundary);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    font-family: var(--ff-texting);
+    color: var(--fc-primary);
+
+    font-weight: 400;
+    font-size: 2.0rem;
+    
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 6.3rem;
+
+}
+
+main {
+    display: grid;
+    
+    gap: 3.6rem;
+
+    animation: downtop 800ms 400ms backwards;
+    width: 90%;
+
+
+}
+
+.card {
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+
+    
+    
+}
+
+.card h2 {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+}
+
+.card h2 span {
+    border-radius: 2rem;
+    background-color: var(--bg-main);
+    font-family: var(--ff-heading);
+    color: var(--fc-secundary);
+
+    font-weight: 400;
+    padding: 0 2.4rem;
+    height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card img {
+    object-fit: cover;
+
+    border-radius: 20px;
+    transition: all 200ms;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+   100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
